@@ -1,0 +1,16 @@
+{
+  "name": "TechSprint",
+  "short_name": "TechSprint",
+  "description": "Master technology with structured learning paths",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

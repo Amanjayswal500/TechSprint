@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React 19: What's New — TechSprint</title>
+  <meta name="description" content="Explore React 19 features including Server Components, Actions, use() hook, and improved performance.">
+  <link rel="canonical" href="https://techsprint.dev/tech/react.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb"><a href="../">Home</a><span class="breadcrumb__separator">/</span><a href="./">Latest Tech</a><span class="breadcrumb__separator">/</span><span>React 19</span></nav>
+        <div class="tech-hero">
+          <div class="tech-hero__icon">⚛️</div>
+          <div>
+            <span class="badge badge--primary">Frontend</span>
+            <h1>React 19: What's New</h1>
+            <p>Server Components, Actions, and the future of React development.</p>
+            <div class="tech-hero__meta"><span>Jan 10, 2026</span><span>6 min read</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="article-layout">
+          <article class="article-content">
+            <p>React 19 represents a significant evolution in the React ecosystem. With the stable release of Server Components, the new Actions API, and improved concurrent rendering, React continues to push the boundaries of what's possible in web development.</p>
+            <h2 id="server-components">React Server Components</h2>
+            <p>Server Components allow you to render components on the server, reducing the JavaScript bundle sent to the client. This means faster page loads and better SEO, while still maintaining the interactive experience React is known for.</p>
+            <div class="code-block">
+              <div class="code-block__header"><span class="code-block__lang">jsx</span><button class="code-block__copy">Copy</button></div>
+              <pre><code>// Server Component (runs on server)
+async function ProductList() {
+  const products = await db.products.findMany();
+  return (
+    &lt;ul&gt;
+      {products.map(p =&gt; &lt;ProductCard key={p.id} product={p} /&gt;)}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+            </div>
+            <h2 id="actions">Actions API</h2>
+            <p>The new Actions API simplifies form handling and data mutations. Instead of managing loading states and error handling manually, Actions provide a declarative way to handle server-side operations.</p>
+            <h2 id="use-hook">The use() Hook</h2>
+            <p>React 19 introduces the <code>use()</code> hook for reading resources like Promises and Context in render. This enables more flexible data fetching patterns within components.</p>
+            <h2 id="performance">Performance Improvements</h2>
+            <p>React 19 includes automatic batching improvements, better hydration, and reduced memory usage. The compiler (React Forget) automatically memoizes components, reducing the need for manual <code>useMemo</code> and <code>useCallback</code>.</p>
+            <h2 id="migration">Migration Guide</h2>
+            <p>Most React 18 applications can upgrade to React 19 with minimal changes. Key areas to review:</p>
+            <ul>
+              <li>Replace legacy Context patterns with the new <code>use()</code> hook where appropriate</li>
+              <li>Adopt Server Components in Next.js App Router projects</li>
+              <li>Update form handling to use the Actions API</li>
+              <li>Remove unnecessary memoization now handled by the compiler</li>
+            </ul>
+          </article>
+          <aside class="article-toc">
+            <div class="article-toc__title">On this page</div>
+            <a href="#server-components" class="article-toc__link">Server Components</a>
+            <a href="#actions" class="article-toc__link">Actions API</a>
+            <a href="#use-hook" class="article-toc__link">The use() Hook</a>
+            <a href="#performance" class="article-toc__link">Performance</a>
+            <a href="#migration" class="article-toc__link">Migration Guide</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

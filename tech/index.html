@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Tech — TechSprint</title>
+  <meta name="description" content="Stay updated with the latest technology trends, frameworks, and tools shaping software development in 2026.">
+  <link rel="canonical" href="https://techsprint.dev/tech/">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb"><a href="../">Home</a><span class="breadcrumb__separator">/</span><span>Latest Tech</span></nav>
+        <h1>Latest <span class="text-gradient">Technology</span></h1>
+        <p>Insights, trends, and deep dives into the technologies shaping the future of software development.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="tabs filter-bar__tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="frontend">Frontend</button>
+            <button class="tab" data-filter="backend">Backend</button>
+            <button class="tab" data-filter="ai">AI & ML</button>
+            <button class="tab" data-filter="cloud">Cloud</button>
+          </div>
+          <span class="filter-bar__count">5 results</span>
+        </div>
+        <div class="grid grid--3">
+          <a href="ai-ml.html" class="card card--hover fade-in" data-category="ai">
+            <span class="badge badge--accent">Featured</span>
+            <div class="card__icon" style="margin-top: 1rem;">🤖</div>
+            <h3 class="card__title">AI & Machine Learning in 2026</h3>
+            <p class="card__description">How generative AI and LLMs are transforming software development workflows.</p>
+            <div class="card__meta"><span>Jan 15, 2026</span><span>8 min read</span></div>
+          </a>
+          <a href="react.html" class="card card--hover fade-in" data-category="frontend">
+            <span class="badge badge--primary">Updated</span>
+            <div class="card__icon" style="margin-top: 1rem;">⚛️</div>
+            <h3 class="card__title">React 19: What's New</h3>
+            <p class="card__description">Server Components, Actions, and the future of React development.</p>
+            <div class="card__meta"><span>Jan 10, 2026</span><span>6 min read</span></div>
+          </a>
+          <a href="nextjs.html" class="card card--hover fade-in" data-category="frontend">
+            <div class="card__icon">▲</div>
+            <h3 class="card__title">Next.js 15 Overview</h3>
+            <p class="card__description">Turbopack, partial prerendering, and the App Router evolution.</p>
+            <div class="card__meta"><span>Jan 5, 2026</span><span>7 min read</span></div>
+          </a>
+          <a href="python.html" class="card card--hover fade-in" data-category="backend">
+            <div class="card__icon">🐍</div>
+            <h3 class="card__title">Python in 2026</h3>
+            <p class="card__description">Why Python remains the top choice for backend and data science.</p>
+            <div class="card__meta"><span>Dec 28, 2025</span><span>5 min read</span></div>
+          </a>
+          <a href="cloud.html" class="card card--hover fade-in" data-category="cloud">
+            <div class="card__icon">☁️</div>
+            <h3 class="card__title">Cloud Computing Guide</h3>
+            <p class="card__description">AWS vs Azure vs GCP — choosing the right cloud platform for your projects.</p>
+            <div class="card__meta"><span>Dec 20, 2025</span><span>10 min read</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

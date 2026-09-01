@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorials — TechSprint</title>
+  <meta name="description" content="Hands-on programming tutorials from beginner to advanced. Learn web development, Git, JavaScript, and more.">
+  <link rel="canonical" href="https://techsprint.dev/tutorials/">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb"><a href="../">Home</a><span class="breadcrumb__separator">/</span><span>Tutorials</span></nav>
+        <h1>Programming <span class="text-gradient">Tutorials</span></h1>
+        <p>Hands-on guides to build real skills. From your first line of code to advanced concepts.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="tabs filter-bar__tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="beginner">Beginner</button>
+            <button class="tab" data-filter="intermediate">Intermediate</button>
+            <button class="tab" data-filter="advanced">Advanced</button>
+          </div>
+          <span class="filter-bar__count">4 results</span>
+        </div>
+        <div class="grid grid--3">
+          <a href="getting-started-web-dev.html" class="card card--hover tutorial-card" data-category="beginner">
+            <div class="tutorial-card__image">🌐</div>
+            <span class="badge badge--success">Beginner</span>
+            <h3 class="card__title">Getting Started with Web Development</h3>
+            <p class="card__description">Your first steps into HTML, CSS, and JavaScript. Build your first webpage.</p>
+            <div class="tutorial-card__footer"><span class="card__meta">15 min read</span><span class="card__link">Start →</span></div>
+          </a>
+          <a href="git-basics.html" class="card card--hover tutorial-card" data-category="beginner">
+            <div class="tutorial-card__image">📦</div>
+            <span class="badge badge--primary">Essential</span>
+            <h3 class="card__title">Git Basics for Beginners</h3>
+            <p class="card__description">Version control fundamentals every developer needs to know.</p>
+            <div class="tutorial-card__footer"><span class="card__meta">20 min read</span><span class="card__link">Start →</span></div>
+          </a>
+          <a href="css-flexbox.html" class="card card--hover tutorial-card" data-category="beginner">
+            <div class="tutorial-card__image">📐</div>
+            <span class="badge badge--success">Beginner</span>
+            <h3 class="card__title">CSS Flexbox Complete Guide</h3>
+            <p class="card__description">Master flexbox layout with practical examples and exercises.</p>
+            <div class="tutorial-card__footer"><span class="card__meta">25 min read</span><span class="card__link">Start →</span></div>
+          </a>
+          <a href="javascript-fundamentals.html" class="card card--hover tutorial-card" data-category="intermediate">
+            <div class="tutorial-card__image">⚡</div>
+            <span class="badge badge--warning">Intermediate</span>
+            <h3 class="card__title">JavaScript Fundamentals</h3>
+            <p class="card__description">Deep dive into JS concepts: closures, prototypes, async, and more.</p>
+            <div class="tutorial-card__footer"><span class="card__meta">30 min read</span><span class="card__link">Start →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
