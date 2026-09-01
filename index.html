@@ -43,6 +43,17 @@
 
   <main class="main-content">
     <!-- Hero -->
+      <nav class="section-nav" aria-label="Page sections">
+      <div class="container">
+        <div class="section-nav__inner">
+          <a href="#roadmaps" class="section-nav__link active">Roadmaps</a>
+          <a href="#tech" class="section-nav__link">Latest Tech</a>
+          <a href="#tutorials" class="section-nav__link">Tutorials</a>
+          <a href="#career" class="section-nav__link">Career</a>
+          <a href="#community" class="section-nav__link">Community</a>
+        </div>
+      </div>
+    </nav>
     <section class="hero">
       <div class="hero__grid-bg"></div>
       <div class="container">
@@ -76,7 +87,7 @@
     </section>
 
     <!-- Featured Roadmaps -->
-    <section class="section featured-roadmaps">
+    <section class="section featured-roadmaps" id="roadmaps">
       <div class="container">
         <div class="section-header fade-in">
           <span class="badge badge--accent">Flagship Feature</span>
@@ -148,11 +159,12 @@
         <div style="text-align: center; margin-top: 2.5rem;">
           <a href="roadmaps/" class="btn btn--secondary">View All Roadmaps →</a>
         </div>
+        <div data-faq="roadmaps"></div>
       </div>
     </section>
 
     <!-- Latest Tech -->
-    <section class="section tech-trends">
+    <section class="section tech-trends" id="tech">
       <div class="container">
         <div class="section-header fade-in">
           <h2>Latest <span class="text-gradient">Tech Trends</span></h2>
@@ -202,11 +214,12 @@
         <div style="text-align: center; margin-top: 2.5rem;">
           <a href="tech/" class="btn btn--secondary">Explore Latest Tech →</a>
         </div>
+        <div data-faq="tech"></div>
       </div>
     </section>
 
     <!-- Tutorials Preview -->
-    <section class="section">
+    <section class="section" id="tutorials">
       <div class="container">
         <div class="section-header fade-in">
           <h2>Popular <span class="text-gradient">Tutorials</span></h2>
@@ -244,11 +257,12 @@
             </div>
           </a>
         </div>
+        <div data-faq="tutorials"></div>
       </div>
     </section>
 
     <!-- Career Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" id="career">
       <div class="container">
         <div class="section-header fade-in">
           <h2>Launch Your <span class="text-gradient">Tech Career</span></h2>
@@ -274,11 +288,12 @@
             <span class="card__link">Learn more →</span>
           </a>
         </div>
+        <div data-faq="career"></div>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section testimonials">
+    <section class="section testimonials" id="community">
       <div class="container">
         <div class="section-header fade-in">
           <h2>Trusted by <span class="text-gradient">Developers</span></h2>

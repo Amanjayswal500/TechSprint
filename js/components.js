@@ -12,6 +12,54 @@ const TechSprint = {
     { href: '/about.html', label: 'About' }
   ],
 
+  faqCollections: {
+    roadmaps: {
+      heading: 'Roadmaps FAQ',
+      items: [
+        { q: 'How do I choose the right roadmap?', a: 'Start with the role you want. Frontend is the most common entry point if you enjoy visual work. Backend fits if you like data and APIs. Full stack combines both. DevOps and Data Science are stronger once you have programming fundamentals.' },
+        { q: 'How long does a roadmap take to complete?', a: 'Most paths take 6–18 months of consistent study. Duration depends on your weekly hours, prior experience, and whether you build projects alongside each skill — not just check boxes.' },
+        { q: 'Can I track my progress?', a: 'Yes. Each roadmap has skill checklists stored in your browser. Check off topics as you learn and the progress bar on roadmap cards updates automatically.' },
+        { q: 'Do I need prior coding experience?', a: 'Frontend and Backend roadmaps include beginner phases. Full stack, DevOps, and Data Science assume you already know basic programming. Use our tutorials if you are starting from zero.' }
+      ]
+    },
+    tech: {
+      heading: 'Latest Tech FAQ',
+      items: [
+        { q: 'How often is this section updated?', a: 'We refresh trend write-ups as major framework and platform releases land. Expect coverage of React, Next.js, Python, cloud, and AI throughout the year — not only at launch week.' },
+        { q: 'Which technologies should I learn in 2026?', a: 'Core web skills (JavaScript/TypeScript, a frontend framework, APIs, and Git) still matter most. Layer on AI-assisted development and cloud basics so you can ship and operate real products.' },
+        { q: 'Are these articles beginner-friendly?', a: 'Each piece explains why a technology matters, then goes deeper. Beginners should pair an article with a related tutorial or roadmap so the concepts have a place to land.' },
+        { q: 'Should I chase every new framework?', a: 'No. Learn one stack thoroughly, then sample new tools when they solve a real problem. Trends help you stay aware; roadmaps keep you employable.' }
+      ]
+    },
+    tutorials: {
+      heading: 'Tutorials FAQ',
+      items: [
+        { q: 'Are the tutorials free?', a: 'Yes. All TechSprint tutorials are free to read. You can follow them at your own pace without an account.' },
+        { q: 'What order should I follow?', a: 'Start with Getting Started with Web Development, then Git Basics, then CSS Flexbox, then JavaScript Fundamentals. After that, pick a roadmap and keep building projects.' },
+        { q: 'Do tutorials include hands-on practice?', a: 'Yes. Each guide is written so you can code along in the browser or a local editor. Treat the examples as exercises, not just reading material.' },
+        { q: 'How long is each tutorial?', a: 'Most take 15–30 minutes. Use them as focused sessions. If a concept is still fuzzy, repeat the examples before moving on.' }
+      ]
+    },
+    career: {
+      heading: 'Career FAQ',
+      items: [
+        { q: 'How do I build a portfolio with no job experience?', a: 'Ship 3–5 complete projects that solve a real problem. Document the problem, your decisions, and a live demo. Quality and clarity beat a long list of unfinished clones.' },
+        { q: 'How should I prepare for technical interviews?', a: 'Practice coding problems, system design at the right level for the role, and behavioral stories using the STAR format. Our interview prep guide covers all three.' },
+        { q: 'What projects impress employers?', a: 'Projects with real users, clean Git history, tests, and a deployed URL. Full-stack apps, tools that save time, or data projects with a clear insight stand out more than tutorial replicas.' },
+        { q: 'How long does it take to become job-ready?', a: 'With a structured roadmap, projects, and interview practice, many career-switchers reach junior-ready in 8–14 months. Consistency matters more than speed.' }
+      ]
+    },
+    about: {
+      heading: 'About TechSprint FAQ',
+      items: [
+        { q: 'Is TechSprint free to use?', a: 'Yes. Roadmaps, tutorials, and career guides are free. We exist to give learners a clear path without a paywall on the core content.' },
+        { q: 'Who creates the content?', a: 'Practicing engineers and educators. We keep paths aligned with what teams actually hire for, and we update them as the industry shifts.' },
+        { q: 'Can I suggest a topic or correction?', a: 'Yes. Reach us through the contact links in the footer. Community feedback is how roadmaps stay accurate.' },
+        { q: 'Do I need to create an account?', a: 'No account is required to read content. Roadmap progress is saved locally in your browser so you can pick up where you left off.' }
+      ]
+    }
+  },
+
   searchIndex: [
     { title: 'Frontend Developer Roadmap', url: '/roadmaps/frontend-developer.html', category: 'Roadmaps', icon: '🗺️' },
     { title: 'Backend Developer Roadmap', url: '/roadmaps/backend-developer.html', category: 'Roadmaps', icon: '🗺️' },
@@ -163,6 +211,7 @@ function renderFooter() {
             <h4 class="footer__heading">Company</h4>
             <div class="footer__links">
               <a href="${resolveUrl('/about.html')}">About</a>
+              <a href="${resolveUrl('/about.html')}#faq-about">FAQ</a>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
               <a href="#">Contact</a>
@@ -179,6 +228,69 @@ function renderFooter() {
   `;
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function renderFaq(collectionKey) {
+  const collection = TechSprint.faqCollections[collectionKey];
+  if (!collection) return '';
+
+  const items = collection.items.map((item, index) => `
+    <details class="faq__item"${index === 0 ? ' open' : ''}>
+      <summary class="faq__question">${escapeHtml(item.q)}</summary>
+      <div class="faq__answer"><p>${escapeHtml(item.a)}</p></div>
+    </details>
+  `).join('');
+
+  return `
+    <div class="faq" id="faq-${collectionKey}">
+      <h3 class="faq__heading">${escapeHtml(collection.heading)}</h3>
+      ${items}
+    </div>
+  `;
+}
+
+function injectFaqs() {
+  const mounts = document.querySelectorAll('[data-faq]');
+  const usedKeys = [];
+
+  mounts.forEach(mount => {
+    const key = mount.dataset.faq;
+    const markup = renderFaq(key);
+    if (!markup) return;
+    usedKeys.push(key);
+    mount.outerHTML = markup;
+  });
+
+  if (!usedKeys.length) return;
+
+  const faqEntities = usedKeys.flatMap(key => {
+    const collection = TechSprint.faqCollections[key];
+    return collection ? collection.items : [];
+  });
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqEntities.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a
+      }
+    }))
+  });
+  document.head.appendChild(script);
+}
+
 function injectComponents() {
   const headerPlaceholder = document.getElementById('site-header');
   const footerPlaceholder = document.getElementById('site-footer');
@@ -189,6 +301,8 @@ function injectComponents() {
   if (footerPlaceholder) {
     footerPlaceholder.outerHTML = renderFooter();
   }
+
+  injectFaqs();
 
   if (typeof updateThemeIcon === 'function') {
     const theme = document.documentElement.getAttribute('data-theme');

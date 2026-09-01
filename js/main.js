@@ -179,6 +179,35 @@ function initCopyButtons() {
   });
 }
 
+function initSectionNav() {
+  const nav = document.querySelector('.section-nav');
+  if (!nav) return;
+
+  const links = [...nav.querySelectorAll('.section-nav__link')];
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(entry => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) return;
+
+    links.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`);
+    });
+  }, {
+    rootMargin: '-30% 0px -55% 0px',
+    threshold: [0.1, 0.25, 0.5]
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
 function initApp() {
   initNavigation();
   initSearch();
@@ -186,6 +215,7 @@ function initApp() {
   initTabs();
   initNewsletter();
   initCopyButtons();
+  initSectionNav();
 }
 
 document.addEventListener('components:loaded', initApp);

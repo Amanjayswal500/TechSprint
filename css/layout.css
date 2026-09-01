@@ -274,6 +274,47 @@
   }
 }
 
+/* ===== Section Navigation ===== */
+.section-nav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: calc(var(--z-fixed) - 1);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .section-nav {
+  background: rgba(11, 17, 32, 0.92);
+}
+
+.section-nav__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow-x: auto;
+  padding: var(--space-3) 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-nav__link {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.section-nav__link:hover,
+.section-nav__link.active {
+  color: var(--color-primary);
+  background: rgba(59, 130, 246, 0.1);
+}
+
 /* ===== Hero ===== */
 .hero {
   padding: calc(var(--header-height) + var(--space-16)) 0 var(--space-20);
