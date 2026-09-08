@@ -9,7 +9,7 @@ const TechSprint = {
     { href: '/tech/', label: 'Latest Tech' },
     { href: '/tutorials/', label: 'Tutorials' },
     { href: '/career/', label: 'Career & Projects' },
-    { href: '/about.html', label: 'About' }
+    { href: '/about', label: 'About' }
   ],
 
   faqCollections: {
@@ -61,24 +61,24 @@ const TechSprint = {
   },
 
   searchIndex: [
-    { title: 'Frontend Developer Roadmap', url: '/roadmaps/frontend-developer.html', category: 'Roadmaps', icon: '🗺️' },
-    { title: 'Backend Developer Roadmap', url: '/roadmaps/backend-developer.html', category: 'Roadmaps', icon: '🗺️' },
-    { title: 'Full Stack Developer Roadmap', url: '/roadmaps/fullstack-developer.html', category: 'Roadmaps', icon: '🗺️' },
-    { title: 'DevOps Engineer Roadmap', url: '/roadmaps/devops-engineer.html', category: 'Roadmaps', icon: '🗺️' },
-    { title: 'Data Scientist Roadmap', url: '/roadmaps/data-scientist.html', category: 'Roadmaps', icon: '🗺️' },
-    { title: 'React 19 Features', url: '/tech/react.html', category: 'Latest Tech', icon: '⚛️' },
-    { title: 'AI & Machine Learning Trends', url: '/tech/ai-ml.html', category: 'Latest Tech', icon: '🤖' },
-    { title: 'Cloud Computing Guide', url: '/tech/cloud.html', category: 'Latest Tech', icon: '☁️' },
-    { title: 'Python in 2026', url: '/tech/python.html', category: 'Latest Tech', icon: '🐍' },
-    { title: 'Next.js 15 Overview', url: '/tech/nextjs.html', category: 'Latest Tech', icon: '▲' },
-    { title: 'Getting Started with Web Development', url: '/tutorials/getting-started-web-dev.html', category: 'Tutorials', icon: '📚' },
-    { title: 'Git Basics for Beginners', url: '/tutorials/git-basics.html', category: 'Tutorials', icon: '📚' },
-    { title: 'CSS Flexbox Complete Guide', url: '/tutorials/css-flexbox.html', category: 'Tutorials', icon: '📚' },
-    { title: 'JavaScript Fundamentals', url: '/tutorials/javascript-fundamentals.html', category: 'Tutorials', icon: '📚' },
-    { title: 'Portfolio Building Guide', url: '/career/portfolio-guide.html', category: 'Career', icon: '💼' },
-    { title: 'Technical Interview Prep', url: '/career/interview-prep.html', category: 'Career', icon: '💼' },
-    { title: 'Project Ideas for Developers', url: '/career/project-ideas.html', category: 'Career', icon: '💼' },
-    { title: 'About TechSprint', url: '/about.html', category: 'About', icon: 'ℹ️' }
+    { title: 'Frontend Developer Roadmap', url: '/roadmaps/frontend-developer', category: 'Roadmaps', icon: '🗺️' },
+    { title: 'Backend Developer Roadmap', url: '/roadmaps/backend-developer', category: 'Roadmaps', icon: '🗺️' },
+    { title: 'Full Stack Developer Roadmap', url: '/roadmaps/fullstack-developer', category: 'Roadmaps', icon: '🗺️' },
+    { title: 'DevOps Engineer Roadmap', url: '/roadmaps/devops-engineer', category: 'Roadmaps', icon: '🗺️' },
+    { title: 'Data Scientist Roadmap', url: '/roadmaps/data-scientist', category: 'Roadmaps', icon: '🗺️' },
+    { title: 'React 19 Features', url: '/tech/react', category: 'Latest Tech', icon: '⚛️' },
+    { title: 'AI & Machine Learning Trends', url: '/tech/ai-ml', category: 'Latest Tech', icon: '🤖' },
+    { title: 'Cloud Computing Guide', url: '/tech/cloud', category: 'Latest Tech', icon: '☁️' },
+    { title: 'Python in 2026', url: '/tech/python', category: 'Latest Tech', icon: '🐍' },
+    { title: 'Next.js 15 Overview', url: '/tech/nextjs', category: 'Latest Tech', icon: '▲' },
+    { title: 'Getting Started with Web Development', url: '/tutorials/getting-started-web-dev', category: 'Tutorials', icon: '📚' },
+    { title: 'Git Basics for Beginners', url: '/tutorials/git-basics', category: 'Tutorials', icon: '📚' },
+    { title: 'CSS Flexbox Complete Guide', url: '/tutorials/css-flexbox', category: 'Tutorials', icon: '📚' },
+    { title: 'JavaScript Fundamentals', url: '/tutorials/javascript-fundamentals', category: 'Tutorials', icon: '📚' },
+    { title: 'Portfolio Building Guide', url: '/career/portfolio-guide', category: 'Career', icon: '💼' },
+    { title: 'Technical Interview Prep', url: '/career/interview-prep', category: 'Career', icon: '💼' },
+    { title: 'Project Ideas for Developers', url: '/career/project-ideas', category: 'Career', icon: '💼' },
+    { title: 'About TechSprint', url: '/about', category: 'About', icon: 'ℹ️' }
   ]
 };
 
@@ -107,7 +107,7 @@ function isActiveLink(href) {
     return isRoot && !inSubsection && !path.includes('about');
   }
 
-  if (href === '/about.html') {
+  if (href === '/about') {
     return path.includes('about');
   }
 
@@ -202,16 +202,16 @@ function renderFooter() {
           <div>
             <h4 class="footer__heading">Career</h4>
             <div class="footer__links">
-              <a href="${resolveUrl('/career/portfolio-guide.html')}">Portfolio Guide</a>
-              <a href="${resolveUrl('/career/interview-prep.html')}">Interview Prep</a>
-              <a href="${resolveUrl('/career/project-ideas.html')}">Project Ideas</a>
+              <a href="${resolveUrl('/career/portfolio-guide')}">Portfolio Guide</a>
+              <a href="${resolveUrl('/career/interview-prep')}">Interview Prep</a>
+              <a href="${resolveUrl('/career/project-ideas')}">Project Ideas</a>
             </div>
           </div>
           <div>
             <h4 class="footer__heading">Company</h4>
             <div class="footer__links">
-              <a href="${resolveUrl('/about.html')}">About</a>
-              <a href="${resolveUrl('/about.html')}#faq-about">FAQ</a>
+              <a href="${resolveUrl('/about')}">About</a>
+              <a href="${resolveUrl('/about')}#faq-about">FAQ</a>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
               <a href="#">Contact</a>

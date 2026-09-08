@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://techsprint.dev/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://techsprint.dev/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://techsprint.dev/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://techsprint.dev/roadmaps/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techsprint.dev/roadmaps/frontend-developer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techsprint.dev/roadmaps/backend-developer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techsprint.dev/roadmaps/fullstack-developer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techsprint.dev/roadmaps/devops-engineer.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://techsprint.dev/roadmaps/data-scientist.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://techsprint.dev/roadmaps/frontend-developer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://techsprint.dev/roadmaps/backend-developer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://techsprint.dev/roadmaps/fullstack-developer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://techsprint.dev/roadmaps/devops-engineer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://techsprint.dev/roadmaps/data-scientist</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://techsprint.dev/tech/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://techsprint.dev/tech/react.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tech/ai-ml.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tech/cloud.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tech/python.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tech/nextjs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tech/react</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tech/ai-ml</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tech/cloud</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tech/python</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tech/nextjs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techsprint.dev/tutorials/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://techsprint.dev/tutorials/getting-started-web-dev.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tutorials/git-basics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tutorials/css-flexbox.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/tutorials/javascript-fundamentals.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tutorials/getting-started-web-dev</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tutorials/git-basics</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tutorials/css-flexbox</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/tutorials/javascript-fundamentals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://techsprint.dev/career/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://techsprint.dev/career/portfolio-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/career/interview-prep.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://techsprint.dev/career/project-ideas.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/career/portfolio-guide</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/career/interview-prep</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://techsprint.dev/career/project-ideas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

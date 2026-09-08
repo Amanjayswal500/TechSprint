@@ -1,6 +1,6 @@
 function getRoadmapKey() {
   const path = window.location.pathname;
-  const match = path.match(/\/([^/]+)\.html$/);
+  const match = path.match(/\/([^/]+)\/?$/);
   return match ? match[1] : null;
 }
 
